@@ -18,6 +18,7 @@ public class Login extends ActionSupport implements ModelDriven<Account>{
 	@Override
 	public Account getModel() {
 		// TODO 自动生成的方法存根
+		System.out.println("111");
 		return account;
 	}
 

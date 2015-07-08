@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="strus2" extends="struts-default">
+		<action name="proj_login" class="action.Login" method="execute">
+			<result name="success" type="redirect">index.jsp</result>
+			<result name="error">passerror.html</result>
+		</action>
+		<action name="proj_changepass" class="action.ChangePass" method="execute">
+			<result name="success" type="redirect">login.jsp</result>
+			<result name="error">error.html</result>
+			<result name="input">changepass.jsp</result>
+		</action>
+		<action name="addmessage" class="action.MessageAction" method="execute">
+			<result name="success" type="redirect">dispatch.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="updatedata" class="action.UpdateDate" method="execute">
+			<result name="success" type="redirect">index.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="proj" class="action.Proj" method="execute">
+			<result name="success" type="redirect">project.jsp</result>
+			<result name="input" >project.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="endproj" class="action.EndProject" method="execute">
+			<result name="success" type="redirect">index.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*student" class="action.StudentsAction" method="{1}">
+			<result name="success" type="redirect">students.jsp</result>
+			<result name="input">{1}students.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*change" class="action.Change" method="{1}">
+			<result name="success" type="redirect">{1}.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*teacher" class="action.DirectorAction" method="{1}">
+			<result name="success" type="redirect">students.jsp</result>
+			<result name="input">{1}teacher.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*journal" class="action.JournalAction" method="{1}">
+			<result name="success" type="redirect">journal.jsp</result>
+			<result name="input">{1}journal.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*fare" class="action.FareAction" method="{1}">
+			<result name="success" type="redirect">fare.jsp</result>
+			<result name="input">fare.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="application" class="action.ApplicationAction" >
+			<result name="success" type="redirect">project.jsp</result>
+			<result name="input">project.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="middlereport" class="action.MiddlereportAction" >
+			<result name="success" type="redirect">project.jsp</result>
+			<result name="input">project.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="finalreport" class="action.FinalreportAction" >
+			<result name="success" type="redirect">project.jsp</result>
+			<result name="input">project.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="register" class="action.Register" method="execute">
+			<result name="success" type="redirect">index.jsp</result>
+			<result name="input">register.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		 <action name="exit" class="action.ExitAction" method="execute">
+			<result name="success" type="redirect">index.jsp</result>
+		</action>
+		
+		
+		<!--教师端部分-->
+		
+		<action name="teacher_login" class="action.TLogin" method="execute">
+			<result name="success" type="redirect">School/index.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*news" class="action.NewsAction" method="{1}">
+			<result name="success" type="redirect">School/news.jsp</result>
+			<result name="input">{1}news.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*school" class="action.SchoolAction" method="{1}">
+			<result name="success" type="redirect">School/school.jsp</result>
+			<result name="input">school.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*system" class="action.MySystemAction" method="{1}">
+			<result name="success" type="redirect">School/system.jsp</result>
+			<result name="input">system.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*roleaction" class="action.Role1Action" method="{1}">
+			<result name="success" type="redirect">/School/role.jsp</result>
+			<result name="input">role.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*action" class="action.ActionAction" method="{1}">
+			<result name="success" type="redirect">School/action.jsp</result>
+			<result name="input">action.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*role" class="action.RolelAction" method="{1}">
+			<result name="success" type="redirect">School/role.jsp</result>
+			<result name="input">role.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*user" class="action.UserAction" method="{1}">
+			<result name="success" type="redirect">School/users.jsp</result>
+			<result name="input">users.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		<action name="*project" class="action.ProjectAction" method="{1}">
+			<result name="success" type="redirect">School/projects.jsp</result>
+			<result name="input" >projects.jsp</result>
+			<result name="error">error.html</result>
+		</action>
+		
+	</package>
+</struts>    

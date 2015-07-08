@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators SYSTEM "http://struts.apache.org/dtds/xwork-validator-1.0.dtd" >
+<validators>
+	<field name="reason">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>  
+			<message>原因不能为空</message>
+		</field-validator>
+	</field>
+</validators>

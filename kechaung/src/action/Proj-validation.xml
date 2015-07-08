@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators SYSTEM "http://struts.apache.org/dtds/xwork-validator-1.0.dtd" >
+<validators>
+	<field name="progress">
+		<field-validator type="int">
+			<param name="min">0</param>  
+			<param name="max">100</param> 
+			<message>进度应为0~100之间的整数</message>
+		</field-validator>
+	</field>
+</validators>

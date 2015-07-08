@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators SYSTEM "http://struts.apache.org/dtds/xwork-validator-1.0.dtd" >
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param> 
+			<message>动作名不能为空</message>
+		</field-validator>
+	</field>
+	<field name="link">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>  
+			<message>链接不能为空</message>
+		</field-validator>
+	</field>
+	<field name="parent">
+		<field-validator type="int">
+			<param name="min">0</param>  
+			<message>尚未选择父文件夹</message>
+		</field-validator>
+	</field>
+</validators>
